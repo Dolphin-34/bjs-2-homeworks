@@ -1,10 +1,10 @@
 "use strict"
 function solveEquation(a, b, c) {
   let arr = [];
-  const calculation = Math.pow(b**2) - 4*a*c
+  const calculation = b**2 - 4*a*c
 
   if (calculation < 0) {
-    arr = [];
+    arr;
   } else if (calculation == 0) {
     const root = -b/(2*a);
     arr = [root];
