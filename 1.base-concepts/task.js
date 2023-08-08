@@ -9,8 +9,8 @@ function solveEquation(a, b, c) {
     const root = -b/(2*a);
     arr = [root];
   } else {
-    const rootOne = (-b + Math.sqrt(d) )/(2*a);
-    const rootTwo = (-b - Math.sqrt(d) )/(2*a);
+    const rootOne = (-b + Math.sqrt(calculation) )/(2*a);
+    const rootTwo = (-b - Math.sqrt(calculation) )/(2*a);
     arr = [rootOne, rootTwo];
   }
 
@@ -41,7 +41,8 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 
     const totalPayment = monthPayment * countMonths; // Сумма, которую заплатит клиент.
     
-    const roundedTotalPayment = Math.round(totalPayment); // Округление суммы до двух значений после запятой.
-
+    const roundedAmount = totalPayment.toFixed(2); // Округление суммы до двух значений после запятой.
+    const roundedTotalPayment = Number(roundedAmount); // Приводим полученную сумму в число из строки
+    
     return roundedTotalPayment;
 }
