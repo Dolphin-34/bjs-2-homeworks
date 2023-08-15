@@ -74,9 +74,11 @@ function makeWork (arrOfArr, func) {
 
   for (const arr of arrOfArr) {
     const newArr = func(...arr);
-  }
 
-  if (newArr > maxWorkerResult) maxWorkerResult = newArr;
+    if (newArr > maxWorkerResult) {
+      maxWorkerResult = newArr;
+    }
+  }
   
   return maxWorkerResult
 }
